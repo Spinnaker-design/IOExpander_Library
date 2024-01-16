@@ -43,9 +43,9 @@ bool PotBreakout::initialise(bool skipChipIdCheck)
     _ioe.setPwmPeriod(period);
     _ioe.setPwmControl(2);  //PWM as fast as we can to avoid LED flicker
 
-    _ioe.setMode(PIN_RED, IOExpander::PIN_PWM, false, INVERT_OUTPUT);
-    _ioe.setMode(PIN_GREEN, IOExpander::PIN_PWM, false, INVERT_OUTPUT);
-    _ioe.setMode(PIN_BLUE, IOExpander::PIN_PWM, false, INVERT_OUTPUT);
+    _ioe.setMode(PIN_RED, IOExpander::IO_PIN_PWM, false, INVERT_OUTPUT);
+    _ioe.setMode(PIN_GREEN, IOExpander::IO_PIN_PWM, false, INVERT_OUTPUT);
+    _ioe.setMode(PIN_BLUE, IOExpander::IO_PIN_PWM, false, INVERT_OUTPUT);
     
     bSucceeded = true;
   }
